@@ -18,8 +18,6 @@ console.log(html)
 
 mainEl.innerHTML = html
 
-//css = await fetch("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css").then(r => r.text())
-
 document.getElementById("stylesheet").href = "markdown.css"
 
 
