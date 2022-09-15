@@ -1,6 +1,5 @@
-# Ali Khosro
-
-> heydari@gmail.com, 253-391-9808, Seattle WA
+# Ali Khosro 
+heydari@gmail.com, 253-391-9808, Seattle WA
 
 ## Hands-on Skills
 

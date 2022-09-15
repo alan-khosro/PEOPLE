@@ -1,0 +1,71 @@
+html {
+    margin: 1em;
+}
+
+body {
+    font: 16px 'noto sans', sans-serif;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 50rem;
+}
+
+h1 {
+    font-size: x-large;
+    text-align: center;
+}
+h1 + p {
+    text-align: center;
+}
+
+h2 {
+    font-size: large;
+    border-top: thin solid lightgrey;
+}
+h3 {
+    font-size: medium;
+}
+
+h4 {
+    font-size: small;
+}
+
+h5 {
+    font-size: small;
+}
+
+h6 {
+    font-size: x-small;
+}
+
+@media only screen and (max-width: 52rem) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 40rem) {
+    body {
+        font-size: 12px;
+    }
+}
+
+blockquote {
+    margin: inherit;
+    padding: 0.5em 1em;
+    background-color: rgb(240, 255, 240);
+    border-radius: 0.5em;
+    border-style: outset;
+}
+
+pre,
+code {
+    font-family: 'Nato Sans Mono', Monospace;
+    background-color: rgb(240, 240, 255);
+}
+
+pre {
+    padding: 1em;
+    border-radius: 0.5em;
+    border-style: outset;
+    overflow-x: auto;
+}
