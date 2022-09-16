@@ -19,14 +19,14 @@ h1 + p {
 
 h2 {
     font-size: large;
-    border-top: thin solid lightgrey;
+    border-bottom: thin solid;
 }
 h3 {
-    font-size: medium;
+    font-size: large;
 }
 
 h4 {
-    font-size: small;
+    font-size: medium;
 }
 
 h5 {
