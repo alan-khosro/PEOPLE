@@ -9,6 +9,7 @@ export const urlMapper = {
     index: "resume/resume.md",
     resume: "resume/resume.md",
     example: "example.md",
+    "boston-crimes": "use-cases/boston-crimes/output/analysis.md",
 }
 
 const params = new URLSearchParams(window.location.search)

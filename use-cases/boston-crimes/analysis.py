@@ -3,7 +3,7 @@
 
 print(f"""Internet Brands Use Case Analysis
 ========================
-Ali Khosro <br> [Source Code](../analysis.py) <br>  [Resume](/)
+Ali Khosro <br> [Source Code](../analysis.py) <br>  [Resume](https://alan-khosro.github.io/public/?file=resume)
 
 
 Questions
