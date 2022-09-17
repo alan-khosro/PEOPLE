@@ -16,8 +16,8 @@ const params = new URLSearchParams(window.location.search)
 // add stylesheet
 stylesheetEl.href = `viewer/${params.get("stylesheet") || "markdown"}.css`
 
-// convert markdown file into html
-const url = urlMapper[params.get("file") || "index"]
+// convert markdown file into html. Get path of the file or file predefine name
+const url = urlMapper[params.get("file") || "index"] || params.get("file")
 fetch(url).then(
         f => f.ok? f.text() : alert("file not found!")
     ).then(
