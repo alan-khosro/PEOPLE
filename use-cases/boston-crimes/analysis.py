@@ -1,6 +1,20 @@
 # Internet Brands Use Case Analysis for Senior Data Science: Boston Crimes Dataset
 # ===================================
 
+print(f"""Internet Brands Use Case Analysis
+========================
+[Source Code](../analysis.py) <br>  [Resume](/)
+
+
+Questions
+----------------------------------
+Use Boston Crime Dataset to answer each of the following questions:
+- q1: Write a script that shows count of Auto Theft and Towed by Phase of Day (as index) vs Montn (as column)
+- q2: Write script to get offense per district which has maximum occurrence in respective district
+- q3: Add a column to data set which contains date of last incidents happened in respective district
+- q4: Write a script to identify street having maximum number of incidents for every district
+- q5: Create a subset of data, with only 10 recent incidents for each Street
+""")
 
 """
 cd ~/public/use-cases/boston-crimes
@@ -11,6 +25,14 @@ import pandas as pd
 import calendar
 import matplotlib.pyplot as plt
 
+
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', 1000)
+pd.options.display.float_format = '{:.1f}'.format
+pd.set_option('styler.format.precision', 1)
+pd.set_option('styler.render.max_rows', 20)
+
+
 df = pd.read_csv("input/crime.csv", encoding="latin1")
 # codes = pd.read_csv("input/offense-codes.csv", encoding="latin1")
 
@@ -20,13 +42,14 @@ df["DISTRICT"] = df["DISTRICT"].fillna("not available")
 df["STREET"] = df["STREET"].str.strip()
 df["OCCURRED_ON_DATE"] = pd.to_datetime(df["OCCURRED_ON_DATE"])
 
-print(f"""## Data Description
-{df.describe()}
+print(f"""Data Description
+----------------------------------
+{df.describe().style.to_html(exclude_styles=True)}
 
-> cleaning:
-    - stripped whitespaces from STREET column
-    - converted OCCURRED_ON_DATE to datetime format
-    - mapped missing DISTRICT to 'not available' as a separate district to avoid unnecessary complications due to missing data
+### Data Cleaning:
+- stripped whitespaces from STREET column
+- converted OCCURRED_ON_DATE to datetime format
+- mapped missing DISTRICT to 'not available' as a separate district to avoid unnecessary complications due to missing data
 
 """)
 
@@ -57,9 +80,11 @@ graph_name = "crime-count.png"
 crime_summary.transpose().plot().get_figure().savefig(f'output/{graph_name}')
 
 
-print(f"""## Q1: Crime Count
+print(f"""Q1: Crime Count
+----------------------------------
 The below shows the crime counts for Auto Theft and Towed offenses:
-{crime_summary}
+
+{crime_summary.style.to_html(exclude_styles=True)}
 
 ![auto theft and towed graph]({graph_name})
 """)
@@ -77,8 +102,9 @@ top_offenses = (
     .head(1) # get the first row of each group
 )
 
-print(f"""## Q2: Most Occurred Offense In A District
-{top_offenses}
+print(f"""Q2: Most Occurred Offense In A District
+------------------------------
+{top_offenses.style.to_html(exclude_styles=True)}
 """)
 
 
@@ -94,8 +120,9 @@ df['last_incident_date'] = (
     .shift(-1)
 )
 
-print(f"""### Q3: Previous Incident Date In Each District
-{df[["DISTRICT", "OCCURRED_ON_DATE", "OFFENSE_DESCRIPTION", "last_incident_date"]]}
+print(f"""Q3: Previous Incident Date In Each District
+------------------------------
+{df[["DISTRICT", "OCCURRED_ON_DATE", "OFFENSE_DESCRIPTION", "last_incident_date"]].style.to_html(exclude_styles=True)}
 """)
 
 
@@ -112,8 +139,9 @@ worst_streets = (
     .head(1) # get the first row of each group
 )
 
-print(f"""## Q4: Streets With Highest Incidents In Each District
-{worst_streets}
+print(f"""Q4: Streets With Highest Incidents In Each District
+------------------------------
+{worst_streets.style.to_html(exclude_styles=True)}
 """)
 
 
@@ -127,8 +155,9 @@ recent_incidents = (
     .head(10)
 )
 
-print(f"""## Q5: Recent Incidents For Each Street
-{recent_incidents}
+print(f"""Q5: Recent Incidents For Each Street
+------------------------------
+{recent_incidents.style.to_html(exclude_styles=True)}
 """)
 
 

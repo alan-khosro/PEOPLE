@@ -51,21 +51,50 @@ h6 {
 
 blockquote {
     margin: inherit;
-    padding: 0.5em 1em;
-    background-color: rgb(240, 255, 240);
     border-radius: 0.5em;
     border-style: outset;
+    margin-top: 1em;
 }
 
 pre,
 code {
     font-family: 'Nato Sans Mono', Monospace;
-    background-color: rgb(240, 240, 255);
+    background-color: rgb(240, 240, 250);
 }
 
 pre {
     padding: 1em;
     border-radius: 0.5em;
-    border-style: outset;
     overflow-x: auto;
+}
+
+table {
+    text-align: left;
+    max-height: 30em;
+    display: block;
+    overflow: auto;
+    font-size: smaller;
+}
+
+table thead {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 1px 0;
+}
+
+tbody th {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    box-shadow: 1px 0 0;
+}
+
+table td,
+table th {
+    padding: 5px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(230, 230, 220);
 }
