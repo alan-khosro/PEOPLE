@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font: 16px 'noto sans', sans-serif;
+    font: 16px sans-serif;
     line-height: 1.5em;
     margin: auto;
     max-width: 50rem;
@@ -54,11 +54,12 @@ blockquote {
     border-radius: 0.5em;
     border-style: outset;
     margin-top: 1em;
+    padding-left: 1em;
 }
 
 pre,
 code {
-    font-family: 'Nato Sans Mono', Monospace;
+    font-family: Monospace;
     background-color: rgb(240, 240, 250);
 }
 
