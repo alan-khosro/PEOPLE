@@ -106,6 +106,10 @@ table {
     display: block;
 }
 
+img {
+    max-width: 100%;
+}
+
 table thead {
     position: sticky;
     top: 0;

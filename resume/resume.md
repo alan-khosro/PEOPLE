@@ -1,6 +1,6 @@
 # Ali Khosro
 
-heydari@gmail.com, 253-391-9808, Seattle WA <br> [Resume](https://alan-khosro.github.io/public/) [Website](https://alan-khosro.github.io/public/) [Github](https://github.com/alan-khosro) [Stackoverflow](https://stackoverflow.com/users/5078847/ali-khosro)
+heydari@gmail.com, 253-391-9808, Seattle WA <br> [Resume](https://storage.googleapis.com/khosro/index.html) [Website](https://storage.googleapis.com/khosro/index.html) [Github](https://github.com/alan-khosro) [Stackoverflow](https://stackoverflow.com/users/5078847/ali-khosro)
 
 ## Hands-on Skills
 

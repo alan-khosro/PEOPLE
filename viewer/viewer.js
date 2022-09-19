@@ -11,10 +11,12 @@ const katex2Url = "https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.mjs"
 
 // defone alias for common pages (?file=resume --> ?file=resume/resume.md)
 const urlMapper = {
-    index: "resume/resume.md",
+    index: "index.md",
     resume: "resume/resume.md",
-    example: "example.md",
     "boston-crimes": "use-cases/boston-crimes/output/analysis.md",
+    "web-visitors": "use-cases/web-visitors-analysis/output/report.md",
+    "order-prediction": "articles/order-prediction-design-document.md",
+
 }
 
 
