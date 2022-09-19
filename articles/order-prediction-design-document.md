@@ -190,7 +190,8 @@ It is common to have side jupyter notebooks that explores data to select the cor
 Since we do not have the weekly or daily sale data, we need to convert the retailer's order to the weekly or daily demand.
 
 The easiest way is to divide the order over the next days until the next order happens.
-$$ y*{mn}(t1...t2) = {{o*{mn}(t1) - o\_{mn}(t2)} \over {t2-t1}} $$ where t1, t2 are times of two consecutive orders
+$$y_{mn}(t1...t2) = {{o_{mn}(t1) - o_{mn}(t2)}\over{t2-t1}}$$
+where t1, t2 are times of two consecutive orders
 
 #### curve fitting
 
