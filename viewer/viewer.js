@@ -1,43 +1,44 @@
-// parse and apply query params to get markdown file and stylesheet file
+// parse query params to get markdown file and stylesheet locations, render markdown to html, render its latex formulas, render its mermaid graphs
 
 const mainEl = document.getElementById("main")
 const stylesheetEl = document.getElementById('stylesheet')
 
-import {marked} from "https://cdnjs.cloudflare.com/ajax/libs/marked/4.1.0/lib/marked.esm.min.js"
-import mermaid from "https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.7/mermaid.esm.min.mjs"
-import renderMathInElement from "https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.mjs";
+const markedUrl = "https://cdnjs.cloudflare.com/ajax/libs/marked/4.1.0/lib/marked.esm.min.js"
+const mermaidUrl = "https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.7/mermaid.esm.min.mjs"
+const katexUrl = "https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.mjs"
+const katexCssUrl = "https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
+const katex2Url = "https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.mjs"
 
-
-export const urlMapper = {
+// defone alias for common pages (?file=resume --> ?file=resume/resume.md)
+const urlMapper = {
     index: "resume/resume.md",
     resume: "resume/resume.md",
     example: "example.md",
     "boston-crimes": "use-cases/boston-crimes/output/analysis.md",
 }
 
+
+// parse params 
 const params = new URLSearchParams(window.location.search)
 
-// add stylesheet
-stylesheetEl.href = `viewer/${params.get("stylesheet") || "markdown"}.css`
-
-// convert markdown file into html. Get path of the file or file predefine name
+// Get path of the markdown file path or its predefine name in urlMapper
+const stylesheet = `viewer/${params.get("stylesheet") || "markdown"}.css`
 const url = urlMapper[params.get("file") || "index"] || params.get("file")
 document.title = url.split('/').pop()
 
-fetch(url).then(
-        f => f.ok? f.text() : alert("file not found!")
-    ).then(
-        md => {
-            mainEl.innerHTML = marked.parse(md)
-            mermaid.init()
-            renderMathInElement(mainEl, {delimiters: latexOptions});
-        }
-    )
 
 
-//// options
+// Start downloading markdown file, css, and libraries 
+const mdPromise = fetch(url).then(r => r.text())
+const markedPromise = import(markedUrl)
+stylesheetEl.href = stylesheet
+const mermaidPromise = import(mermaidUrl)
+const katexCssPromise = import(katexCssUrl, {assert: {type: 'css'}})
+const katex2Promise = import(katex2Url)
+const katexPromise = import(katexUrl)
 
-marked.use({
+// Options
+const markedOptions = {
     baseUrl: url,
     gfm: true,
     breaks: false,
@@ -46,7 +47,7 @@ marked.use({
     smartList: true,
     smartyPants: true,
     xhtml: false,
-})
+}
 
 const latexOptions = [
   {left: "$$", right: "$$", display: true},
@@ -59,4 +60,35 @@ const latexOptions = [
   {left: "\\begin{CD}", right: "\\end{CD}", display: true},
   {left: "\\[", right: "\\]", display: true}
 ]
+
+// render the page
+const md = await mdPromise
+await renderMarkdown(md)
+renderFormulas()
+renderMermaid()
+
+
+
+async function renderMarkdown(md) {
+    const marked = await markedPromise
+    marked.use(markedOptions)
+    mainEl.innerHTML = marked.parse(md)
+    console.log("parsed markdown at", performance.now())
+}
+
+async function renderFormulas() { 
+    const katexCss = await katexCssPromise
+    document.adoptedStyleSheets = [katexCss.default];
+    const renderMathInElement = (await katexPromise).default 
+    const katex = (await katex2Promise).default
+    renderMathInElement(mainEl, {delimiters: latexOptions})
+}
+
+async function renderMermaid() {
+    const mermaid = (await mermaidPromise).default
+    mermaid.init()
+}
+
+
+
 

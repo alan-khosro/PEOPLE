@@ -1,5 +1,6 @@
-# Ali Khosro 
-heydari@gmail.com, 253-391-9808, Seattle WA
+# Ali Khosro
+
+heydari@gmail.com, 253-391-9808, Seattle WA <br> [Resume](https://alan-khosro.github.io/public/) [Website](https://alan-khosro.github.io/public/) [Github](https://github.com/alan-khosro) [Stackoverflow](https://stackoverflow.com/users/5078847/ali-khosro)
 
 ## Hands-on Skills
 
@@ -46,9 +47,3 @@ heydari@gmail.com, 253-391-9808, Seattle WA
 -   MA in Applied Mathematics, University of Illinois, 2010
 -   MBA, Sharif University of Technology, 2005
 -   BS in Industrial Engineering, Sharif University of Technology, 2002
-
-## Portfolio
-
--   Stack Overflow: https://stackoverflow.com/users/5078847/ali-khosro
--   Linkedin: https://www.linkedin.com/in/alikhosro/
--   Github: https://github.com/inVisement

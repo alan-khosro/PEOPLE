@@ -1,25 +1,54 @@
+:root {
+    --highlight: rgb(0, 100, 100);
+    --accent: rgb(230, 240, 230);
+}
+
 html {
-    margin: 1em;
 }
 
 body {
+    padding: 1em;
     font: 16px sans-serif;
     line-height: 1.5em;
     margin: auto;
-    max-width: 50rem;
+    max-width: 60rem;
+    border: thin solid lightgrey;
+}
+
+body * {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-bottom: 0.2em;
+    padding-top: 1em;
+    color: var(--highlight);
+}
+
+p {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 }
 
 h1 {
     font-size: x-large;
+    background-color: var(--accent);
     text-align: center;
 }
 h1 + p {
     text-align: center;
+    background-color: var(--accent);
+    padding-bottom: 1em;
 }
 
 h2 {
-    font-size: large;
-    border-bottom: thin solid;
+    font-size: x-large;
+    border-bottom: thin solid lightgrey;
 }
 h3 {
     font-size: large;
@@ -37,7 +66,7 @@ h6 {
     font-size: x-small;
 }
 
-@media only screen and (max-width: 52rem) {
+@media only screen and (max-width: 55rem) {
     body {
         font-size: 14px;
     }
@@ -50,17 +79,17 @@ h6 {
 }
 
 blockquote {
-    margin: inherit;
     border-radius: 0.5em;
-    border-style: outset;
+    border: thin outset;
     margin-top: 1em;
-    padding-left: 1em;
+    padding: 0 1em;
+    background-color: var(--accent);
 }
 
 pre,
 code {
     font-family: Monospace;
-    background-color: rgb(240, 240, 250);
+    background-color: var(--accent);
 }
 
 pre {
@@ -70,11 +99,11 @@ pre {
 }
 
 table {
+    border-collapse: collapse;
     text-align: left;
     max-height: 30em;
-    display: block;
     overflow: auto;
-    font-size: smaller;
+    display: block;
 }
 
 table thead {
@@ -91,11 +120,15 @@ tbody th {
     box-shadow: 1px 0 0;
 }
 
+tbody td {
+    border-left: thin solid lightgrey;
+}
+
 table td,
 table th {
     padding: 5px;
 }
 
 tbody tr:nth-child(even) {
-    background-color: rgb(230, 230, 220);
+    background-color: var(--accent);
 }
