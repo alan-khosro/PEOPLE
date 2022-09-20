@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=JetBrains+Mono&display=swap');
+
 :root {
     --highlight: rgb(0, 100, 100);
     --accent: rgb(230, 240, 230);
@@ -72,23 +74,16 @@ h6 {
     }
 }
 
-@media only screen and (max-width: 40rem) {
-    body {
-        font-size: 12px;
-    }
-}
-
 blockquote {
-    border-radius: 0.5em;
-    border: thin outset;
-    margin-top: 1em;
+    border: thin solid var(--highlight);
+    border-left: 1em solid var(--highlight);
     padding: 0 1em;
-    background-color: var(--accent);
 }
 
 pre,
 code {
-    font-family: Monospace;
+    font-family: 'JetBrains Mono', Monospace;
+    font-size: 14px;
     background-color: var(--accent);
 }
 
@@ -106,8 +101,12 @@ table {
     display: block;
 }
 
-img {
+img,
+svg,
+table {
+    display: block;
     max-width: 100%;
+    margin: auto;
 }
 
 table thead {
