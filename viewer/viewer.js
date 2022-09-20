@@ -30,13 +30,15 @@ const params = new URLSearchParams(window.location.search)
 
 // Get path of the markdown file path or its predefine name in urlMapper
 const stylesheet = `viewer/${params.get("stylesheet") || "markdown"}.css`
-const url = urlMapper[params.get("file") || "index"] || params.get("file")
+var url = urlMapper[params.get("file") || "index"] || params.get("file")
 document.title = url.split('/').pop()
 
+// check password
 if (shallNotPass.includes(url)) {
     const userInput = prompt("This content needs password")
     if (userInput != url.split("/").pop()) {
         alert("wrong password. Ask Ali to provide you password to see the content!")
+        location.href = "./index.html"
     }
 }
 
