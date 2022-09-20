@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title style="text-align: right">Memo</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Memo - Text Editor" />
+
+        <!-- Manifest and icons -->
+        <link rel="manifest" href="./manifest.json" />
+        <link rel="icon" type="image/png" href="./pwa/favicon.png" />
+
+        <link rel="stylesheet" href="./home/index.css" />
+
+        <!-- Ace editor-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.0/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.0/ext-language_tools.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </head>
+
+    <body>
+        <!--dialog id="dialog">
+        <form method="dialog" id="form">
+
+            <fieldset id="file">
+            </fieldset>
+
+            <fieldset id="action">
+            </fieldset>
+
+            <fieldset id="toggle">
+            </fieldset>
+
+            <div id="button">
+            </div>
+
+            <input type="button" id="butDirectory" value="directories">
+
+
+            <details>
+                <summary>Info</summary>
+                <pre>
+                    App     📝Memo
+                    Author  Ali Khosro
+                </pre>
+            </details>
+        </form>
+    </dialog-->
+
+        <!--button id="menuButton" style="position: absolute; padding: 0; z-index: 100; font-size: x-large;" title="ctrl esc">{☰}<br>📝⋮</button-->
+
+        <fieldset id="menu">
+            <div></div>
+        </fieldset>
+
+        <div
+            id="editor"
+            contenteditable="true"
+            autofocus
+            spellcheck="true"
+            aria-label="Text Editor"
+        ></div>
+    </body>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+        }
+    </script>
+
+    <script type="module" src="./home/index.js"></script>
+</html>

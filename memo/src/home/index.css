@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=JetBrains+Mono&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.viewer {
+    font-family: Roboto, Sans-Serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 1em;
+}
+
+button {
+    font-family: Roboto, Sans-Serif;
+    font-size: 18px;
+}
+
+#editor {
+    height: 100%;
+    white-space: pre;
+    width: 100%;
+    line-height: 1.5;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+}
+
+#output {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#output details {
+    margin-left: 1em;
+}
