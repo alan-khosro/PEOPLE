@@ -19,6 +19,11 @@ const urlMapper = {
 
 }
 
+const shallNotPass = [
+    "use-cases/boston-crimes/output/analysis.md",
+    "use-cases/web-visitors-analysis/output/report.md",
+]
+
 
 // parse params 
 const params = new URLSearchParams(window.location.search)
@@ -27,6 +32,13 @@ const params = new URLSearchParams(window.location.search)
 const stylesheet = `viewer/${params.get("stylesheet") || "markdown"}.css`
 const url = urlMapper[params.get("file") || "index"] || params.get("file")
 document.title = url.split('/').pop()
+
+if (shallNotPass.includes(url)) {
+    const userInput = prompt("This content needs password")
+    if (userInput != url.split("/").pop()) {
+        alert("wrong password. Ask Ali to provide you password to see the content!")
+    }
+}
 
 
 
@@ -75,7 +87,6 @@ async function renderMarkdown(md) {
     const marked = await markedPromise
     marked.use(markedOptions)
     mainEl.innerHTML = marked.parse(md)
-    console.log("parsed markdown at", performance.now())
 }
 
 async function renderFormulas() { 
