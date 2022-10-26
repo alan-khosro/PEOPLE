@@ -12,8 +12,8 @@ const urlMapper = {
 }
 
 const shallNotPass = [
-    'use-cases/boston-crimes/output/analysis.md',
-    'use-cases/web-visitors-analysis/output/report.md',
+    //    'use-cases/boston-crimes/output/analysis.md',
+    //    'use-cases/web-visitors-analysis/output/report.md',
 ]
 
 // parse params

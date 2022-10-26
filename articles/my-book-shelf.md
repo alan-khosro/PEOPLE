@@ -1,0 +1,10 @@
+-   [ ] https://youtu.be/RfOYWeu5pGk Recommends many great books:
+    -   [ ] Domain-Driven Design by Eric Evans
+    -   [ ] Accelerate by Nichole Forsgreen
+    -   [ ] Extreme Programming Explained
+    -   [ ] Design Patterns by gang of four
+    -   [ ] The Pragmatic Programmer
+    -   [ ] Modern Software Engineering by David Farley
+    -   [ ] The Mythical Man-Month
+    -   [ ] The Art of Programming (very technical for CS)
+    -   [ ] The Beginning of Infinity by David Deutsch
