@@ -23,7 +23,7 @@ const params = new URLSearchParams(window.location.search)
 const stylesheet = `viewer/${params.get('stylesheet') || 'markdown'}.css`
 stylesheetEl.href = stylesheet
 
-var url = urlMapper[params.get('file') || 'index'] || params.get('file')
+var url = urlMapper[params.get('path') || 'index'] || params.get('path')
 document.title = url.split('/').pop()
 
 // check password
