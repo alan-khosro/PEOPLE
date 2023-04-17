@@ -1,0 +1,17 @@
+I switched from academic jobs to professional data science and analytics positions about 8 years ago. My educational background is in Engineering (Bachelor), Mathematics (Masters), and Economics (Masters). I had been an instructor for statistics in colleges.
+
+I started my industry experience with python development for ML and data science projects. My solid background in statistics helped me to develop novel solutions. Working in development and collaborative teams helped me to learn how to productionize solutions on public clouds, appreciate CI/CD, trunk-based version control, stateless architecture, and scalable services.
+ 
+In the past 5 years, I have managed BI, data science, and data engineering teams in different sizes from 3 up to over 10 team members. As a team lead, I learned how to transform business requirements to design specs, communicate with different stakeholders, develop roadmaps, manage teams, coach, and deliver solutions with agile methodology. 
+
+On top of data science, which is my main expertise, I am proficient in web development, python and typescript, cloud architecture, and agile delivery.
+
+In recent years, my job was mainly cloud architecture and technical project management for ML and analytics platforms.
+
+After a solid educational background in Engineering, Statistics, and economics, I left the teaching and research world and joined the tech industry. I admire craftsmanship and love building software products especially in ML, Data Science, and Web domains.
+I started my professional journey by hands-on development in Python and JavaScript (full stack dev for ML projects). On top of technical expertise, I learned a lot about the software development life cycle, CI/CD, and agile.
+In recent years, as a manager, I worked with teams of developers, data scientists, and data engineers to deliver the roadmap that the product owners put forward.
+I am very practical and get it done personality, I hugely believe in iterative and collaborative work, and would like to work in a small firm or startup that designs and implements products.
+
+Regards
+Ali Khosro

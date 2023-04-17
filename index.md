@@ -14,7 +14,11 @@ Welcome To My [Website](https://storage.googleapis.com/khosro/index.html) <br> <
 
 -   [Time Series Analysis](?file=web-visitors)
 -   [Data Manupulation](?file=boston-crimes)
+
+## Design Samples
+
 -   [System Design Document](?file=order-prediction)
+-   [Teapot](?file=articles/teapot-demo.md)
 
 ## Web Apps
 

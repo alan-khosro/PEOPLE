@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+
+option go_package = "github.com/alan-khosro/pappus";
+
+package chatter;
+
+service Chat {
+    rpc PostMessage(Message) returns (Message) {}
+}
+
+message Message {
+    string Content = 1;
+}

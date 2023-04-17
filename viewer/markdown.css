@@ -1,21 +1,17 @@
 /*@import url('https://fonts.googleapis.com/css?family=Verdana&display=swap');*/
 
 :root {
-    --highlight: rgb(0, 100, 100);
+    --highlight: rgb(0, 110, 100);
     --accent: rgb(230, 240, 230);
 }
 
-html {
-}
-
 body {
-    padding: 1em;
     font: 18px sans-serif;
     line-height: 1.5em;
+    padding: 1em;
     margin: auto;
     max-width: 60rem;
     border: thin solid lightgrey;
-    font-family: Verdana, Sans-Serif;
 }
 
 a {
@@ -29,123 +25,13 @@ h3,
 h4,
 h5,
 h6 {
-    padding-bottom: 0.2em;
-    padding-top: 1em;
+	padding-top: 1em;
+	margin: 0;
     color: var(--highlight);
+	line-height: 1.5em;
 }
 
 p {
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-}
-
-h1 {
-    font-size: x-large;
-    background-color: var(--accent);
-    text-align: center;
-    margin-bottom: 0;
-}
-
-h1 + p {
-    text-align: center;
-    background-color: var(--accent);
-    padding-bottom: 1em;
-    margin-top: 0;
-}
-
-h2 {
-    font-size: x-large;
-    border-bottom: thin solid lightgrey;
-}
-h3 {
-    font-size: large;
-}
-
-h4 {
-    font-size: medium;
-}
-
-h5 {
-    font-size: small;
-}
-
-h6 {
-    font-size: x-small;
-}
-
-@media only screen and (max-width: 55rem) {
-    body {
-        font-size: 14px;
-    }
-}
-
-blockquote {
-    border: thin solid var(--highlight);
-    border-left: 1em solid var(--highlight);
-    padding: 0 1em;
-}
-
-pre,
-code {
-    font-family: 'JetBrains Mono', Monospace;
-    font-size: 14px;
-    background-color: var(--accent);
-}
-
-pre {
-    padding: 1em;
-    border-radius: 0.5em;
-    overflow-x: auto;
-}
-
-table {
-    border-collapse: collapse;
-    text-align: left;
-    max-height: 30em;
-    overflow: auto;
-    display: block;
-}
-
-figure {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-img,
-svg,
-table {
-    display: block;
-    max-width: 100%;
-    margin: auto;
-}
-
-table thead {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    box-shadow: 0 1px 0;
-}
-
-tbody th {
-    position: sticky;
-    left: 0;
-    background-color: white;
-    box-shadow: 1px 0 0;
-}
-
-tbody td {
-    border-left: thin solid lightgrey;
-}
-
-table td,
-table th {
-    padding: 5px;
-}
-
-tbody tr:nth-child(even) {
-    background-color: var(--accent);
-}
-
-li li {
-    font-size: calc(100% - 1px);
+	margin-top: 0;
+	margin-bottom: .5em;
 }

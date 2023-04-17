@@ -1,12 +1,12 @@
 # Ali Khosro
-- heydari@gmail.com, 253-391-9808, Seattle WA
-- Financial Economics, Machine Learning, Asset Management
+
+-   heydari@gmail.com, 253-391-9808, Seattle WA
+-   Financial Economics, Machine Learning, Asset Management
 
 ## Hands-on Skills
 
 -   Finance: Finanical Economics, Asset Allocation, Portfolio Management
 -   Machine Learning: MLOps, Linear Regression, GLM, Random Forest, Feature Engineering, Model Selection, Time Series, Neural Network
--   Programming: Python, NodeJS, Web Development, Git, Linux, AWS, GCP, Cloud Architecture, Agile
 -   Data Management: Cassandra, ElasticSearch, SQL, BigQuery, MongoDB, NoSQL, Data Architecture
 
 ## Recent Work Experience
@@ -34,10 +34,9 @@
 
     -   Courses: Statistics, Public Economics, Financial Economics
 
-
 ## Education
 
--   MA in Economics, Northern Illinois University, 2014
+-   ABD in Economics, Northern Illinois University, 2014
 -   MA in Applied Mathematics, University of Illinois, 2010
 -   MBA, Sharif University of Technology, 2005
 -   BS in Industrial Engineering, Sharif University of Technology, 2002
